@@ -1,0 +1,6 @@
+1 首先需要安装一个第三方项目 地址：https://github.com/subchen/frep
+2 根据自己的电脑修改ManagerCodisApplicationTests类中的IP、USER_NAME、PASSWORD、WORK_SPACE_PATH、FREP_PATH
+3 windows cmd执行where frep可找到其路径
+4 在需要修改的参数配好的前提下，依次执行@Test方法，即可生成部署一个productName所需要的配置文件，其中generateAddRedisSH这个方法不需要执行，这个方法是后期添加redis实例需要执行的方法
+5 需要注意的是，比如proxy，redis，sentinel都是不止一个实例，由于配置文件生成的地方位于同一个地方，也就是template每个子目录下面，比如生成第一个proxy，需要将生成的proxy.toml文件及时的拷贝，放在指定的位置，再次生成，会覆盖
+6 这个codis的集群，dashboard和fe以及proxy以及sentinel，后期不会变动太大，除非架构变动，只需要动的地方，就是redis，也就是ManagerCodisApplicationTests类下面的generateAddRedisSH方法，在需要动态扩展redis的时候，只需要生成好配置文件，在执行这个方法，生成后台执行的脚本，就ok了！
