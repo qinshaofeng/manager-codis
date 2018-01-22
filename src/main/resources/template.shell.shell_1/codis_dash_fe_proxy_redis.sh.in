@@ -1,0 +1,27 @@
+#caceh1的codis-dashboard codis-fe codis-proxy codis-admin codis-server 的配置、启动、同步等
+# dashboard的日志路径
+mkdir -p /var/log/{{.logDirProductName}}/dashboard/
+# fe的日志路径
+mkdir -p /var/log/{{.logDirProductName}}/fe/
+# 代理的日志路径
+mkdir -p /var/log/{{.logDirProductName}}/proxy/
+# redis的日志路径
+mkdir -p /var/log/{{.logDirProductName}}/redis/{{.redisPort}}/
+# redis pid文件路径
+mkdir -p /var/run/piddir/{{.logDirProductName}}/{{.redisPort}}/
+# redis dump文件路径
+mkdir -p $CODISPATH/dumpdir/{{.logDirProductName}}/{{.redisPort}}/
+# 启动dashboard
+nohup $CODISPATH/bin/codis-dashboard --ncpu=4 --config=$CODISPATH/config/{{.logDirProductName}}/dashboard/dashboard.toml --log=/var/log/{{.logDirProductName}}/dashboard/dashboard.log --log-level=WARN &
+# 启动fe
+nohup $CODISPATH/bin/codis-fe --ncpu=4 --log=/var/log/{{.logDirProductName}}/fe/fe.log --log-level=WARN --zookeeper={{.dashboardStorageAddress}} --listen={{.dashboardHost}}:{{.fePort}} &
+# 启动代理
+nohup $CODISPATH/bin/codis-proxy --ncpu=4 --config=$CODISPATH/config/{{.logDirProductName}}/proxy/proxy1/proxy.toml --log=/var/log/{{.logDirProductName}}/proxy/proxy.log --log-level=WARN &
+# 启动redis
+$CODISPATH/bin/codis-server $CODISPATH/config/{{.logDirProductName}}/redis/{{.redisPort}}/redis.conf
+
+
+
+
+
+

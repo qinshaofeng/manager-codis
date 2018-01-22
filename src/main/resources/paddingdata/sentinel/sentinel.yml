@@ -1,0 +1,22 @@
+# sentinel绑定地址，可以是域名或者ip，比如cache1
+sentinelBindAddress: caceh2
+
+# sentinel隔离路径（端口），比如26379
+sentinelDirPort: 26399
+# log级别
+sentinelLogLevel: notice
+
+# sentinel隔离路径（命名空间），比如codis-schooling
+sentinelDirProductName: codis-codis
+
+# sentinel监听端口，比如26379
+sentinelListenPort: 26399
+
+# sentinel监听redis实例的别名（随意起，最好见名知意），比如codis-search-master
+sentinelMonitorRedisMastername: codis-codis-master
+
+# sentinel监听redis实例的主节点地绑定地址，可以是域名或者ip地址，比如cache1
+sentinelMonitorReidsMasterAddress: cache1
+
+# sentinel监听redis实例的主节点的监听端口，比如6379
+sentinelMonitorRedisMasterPort: 6489

@@ -1,0 +1,15 @@
+# redis绑定地址，ip地址或者域名都可以，比如cache1
+redisBindAddress: cache1
+
+# redis监听端口，比如6379
+redisPort: 6489
+
+# redis隔离路径（端口），比如6379
+redisDirPort: 6489
+
+# redis隔离路径（命名空间），比如codis-schooling
+redisDirProductName: codis-codis
+
+# log级别
+redisLogLevel: notice
+

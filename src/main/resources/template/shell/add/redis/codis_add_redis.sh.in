@@ -1,0 +1,23 @@
+# cache2 de codis-proxy codis-server 的配置、启动、同步
+# redis日志路径
+mkdir -p /var/log/{{.logDirProductName}}/redis/{{.redisPort}}/
+# redis pid文件路径
+mkdir -p /var/run/piddir/{{.logDirProductName}}/{{.redisPort}}/
+# redis duump文件路径
+mkdir -p $CODISPATH/dumpdir/{{.logDirProductName}}/{{.redisPort}}/
+# 启动redis
+$CODISPATH/bin/codis-server $CODISPATH/config/{{.logDirProductName}}/redis/{{.redisPort}}/redis.conf
+
+
+
+
+
+
+
+
+
+
+
+
+
+

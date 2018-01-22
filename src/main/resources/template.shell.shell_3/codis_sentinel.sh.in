@@ -1,0 +1,18 @@
+# sentinel 1 worrk dir
+mkdir -p /var/run/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort1}}/
+# sentinel 2 word dir
+mkdir -p /var/run/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort2}}/
+# sentinel 3 work dir
+mkdir -p /var/run/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort3}}/
+# sentinel 1 log dir
+mkdir -p /var/log/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort1}}/
+# sentinel 2 log dir
+mkdir -p /var/log/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort2}}/
+# sentinel 3 log dir
+mkdir -p /var/log/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort3}}/
+# 后台启动sentinel 1
+nohup $CODISPATH/bin/codis-server $CODISPATH/config/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort1}}/sentinel.conf --sentinel &
+# 后台启动sentinel 2
+nohup $CODISPATH/bin/codis-server $CODISPATH/config/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort2}}/sentinel.conf --sentinel &
+# 后台启动sentinel 3
+nohup $CODISPATH/bin/codis-server $CODISPATH/config/{{.sentinelDirProductName}}/sentinel/{{.sentinelPort3}}/sentinel.conf --sentinel &

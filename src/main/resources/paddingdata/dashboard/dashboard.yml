@@ -1,0 +1,14 @@
+# dashboard中的命名空间名字，比如codis-schooling
+dashboardProductName: codis-codis
+
+# dashboard和其他组件的通信地址，比如cache1：18080
+dashboardRpcAddress: cache1:18084
+
+# 外部存储中心地址，比如node1：2182
+dashboardStorageAddress: node1:2182
+
+# 外部存储中心名字，比如zookeeper
+dashboardStorageName: zookeeper
+
+# dashboard绑定主机ip地址
+dashboardBindAddress: cache1

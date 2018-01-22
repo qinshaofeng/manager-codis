@@ -1,0 +1,10 @@
+# log路径隔离，用prodcutName代替，比如codis-schooling，这个只是举例，以实际的prodcutName为准
+logDirProductName: codis-codis
+# redis监听端口
+redisPort: 6489
+# 外部存储中心地址，比如zookeeper，etcd
+dashboardStorageAddress: node1:2182
+# fe绑定地址，fe所在主机的ip或者域名，比如：cache1
+codisFeHost : cache1
+# fe监听端口
+codisFePort: 8090

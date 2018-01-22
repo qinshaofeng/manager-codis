@@ -1,0 +1,4 @@
+# log隔离路径（productName）,比如codis-codis，以实际的为准
+logDirProductName: codis-codis
+# redis监听端口
+redisPort: 6490

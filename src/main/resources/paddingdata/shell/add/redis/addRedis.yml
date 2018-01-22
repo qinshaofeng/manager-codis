@@ -1,0 +1,7 @@
+# redis隔离路径（端口），比如6379
+redisDirPort: 6589
+
+# redis隔离路径（命名空间），比如codis-schooling
+redisDirProductName: codis-codis
+
+

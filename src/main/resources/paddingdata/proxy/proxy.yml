@@ -1,0 +1,19 @@
+
+# proxy中的命名空间名字，和dashboardProductName保持一致
+proxyProductName: codis-codis
+
+# proxy和dashboard进行异步通信的地址，比如cache1:11080
+proxyRpcAddress: cache1:11084
+
+# 用于redis客户端连接,支持redis协议，端口唯一,比如：cache1:19000
+proxyRedisRpcAddress: cache1:19004
+
+# 用于jodis从zookeeper获取集群proxy信息，目前只支持zookeeper,etcd,
+proxyJodisName: zookeeper
+
+# 就是外部存储中心地址，本次是zookeeper的地址,比如node1：2182
+proxyJodisStorageAddress: node1:2182
+
+
+
+

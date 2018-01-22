@@ -1,0 +1,8 @@
+# sentinel路径隔离（productName），比如codis-codis，以实际的为准
+sentinelDirProductName: codis-codis
+# sentinel 监听端口1，比如26399，跟前面的sentinel保持一致
+sentinelPort1: 26399
+# sentinel 监听端口2，比如26599，跟前面的sentinel保持一致
+sentinelPort2: 26599
+# sentinel 监听端口3，比如26799，跟前面的sentinel保持一致
+sentinelPort3: 26799
